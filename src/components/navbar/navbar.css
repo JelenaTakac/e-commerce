@@ -1,0 +1,23 @@
+.navbar {
+  background-color: blue;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navbar-item {
+  text-decoration: none;
+  color: white;
+}
+
+.active {
+  background-color: red;
+}
+
+.navbar-logo,
+.cart-icon {
+  width: 2.5vw;
+  height: 20vh;
+  cursor: pointer;
+  padding: 5px;
+}

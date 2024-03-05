@@ -1,0 +1,13 @@
+.footer {
+  background-color: purple;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.footer-item {
+  text-decoration: none;
+  color: white;
+}
