@@ -10,14 +10,14 @@
   color: white;
 }
 
-.active {
+.navbar-item.active {
   background-color: red;
 }
 
 .navbar-logo,
 .cart-icon {
-  width: 2.5vw;
-  height: 20vh;
+  width: 2vw;
+  height: 50px;
   cursor: pointer;
   padding: 5px;
 }

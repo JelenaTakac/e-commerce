@@ -1,0 +1,17 @@
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+}
+
+.product {
+  box-shadow: none;
+  cursor: pointer;
+}
+.product:hover {
+  box-shadow: 8px 8px 8px 12px #888888;
+}
+
+.product-image {
+  width: 300px;
+}

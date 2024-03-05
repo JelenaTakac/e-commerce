@@ -9,10 +9,10 @@ const Navbar = () => {
     return (
         <div className="navbar">
             <Logo className="navbar-logo" onClick={() => navigate("/")}/>
-            <NavLink exact to={"/"} activeClassName="active" className="navbar-item">Home</NavLink>
-            <NavLink to={"/about"} activeClassName="active" className="navbar-item">About</NavLink>
-            <NavLink to={"/products"} activeClassName="active" className="navbar-item">Products</NavLink>
-            <NavLink to={"/contact-us"} activeClassName="active" className="navbar-item">Contact Us</NavLink>
+            <NavLink to={"/"} className="navbar-item" end>Home</NavLink>
+            <NavLink to={"/about"} className="navbar-item" end>About</NavLink>
+            <NavLink to={"/products"} className="navbar-item" end>Products</NavLink>
+            <NavLink to={"/contact-us"} className="navbar-item" end>Contact Us</NavLink>
             <CartIcon className="cart-icon" onClick={() => navigate("/cart")}/>
         </div>
     )
