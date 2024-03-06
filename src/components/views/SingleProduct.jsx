@@ -6,35 +6,34 @@ import { ADD_TO_CART } from "../../utils/actionTypes";
 
 const SingleProduct = () => {
     const {cartState, cartDispatch} = useContext(CartContext);
-    // const {numItemsInCart} = cartState
-
-    // ovdje hocu da pozovme funkciju tj. type: ADD_TO_CART i ond updejtuje stanje cartState sa proizovidima koji su dodati u korpu
-
     const {productId} = useParams();
     const navigate = useNavigate();
-
     const [productInfo, setProductInfo] = useState(undefined);
     const [amount, setAmount] = useState(1);
-    // const {image, title, rating, price, category} = productInfo;
 
-    const toggleAmount = (id, type) => {
-        console.log(id, type);
-        console.log(cartState);
-        // cartDispatch({})
+    const handleIncrement = () => {
+        setAmount(prevState => prevState + 1);
     }
 
+    const handleDecrement = () => {
+        if (amount > 1) {
+            setAmount(prevState => prevState - 1);
+        }
+    }
 
     const handleClick = (productInfo) => {
-        console.log(productInfo);
+        const cartProduct = {
+            ...productInfo,
+            amount,
+        }
+        console.log(cartProduct);
         if (productInfo) {
             cartDispatch({
                 type: ADD_TO_CART,
-                payload: {
-                    productInfo,
-                    amount
-                }
+                payload: cartProduct
             })
         }
+        navigate("/cart");
     }
 
     useEffect(() => {
@@ -47,27 +46,29 @@ const SingleProduct = () => {
 
 
     return (
-        <>
-            <button onClick={() => navigate(-1)}>Back to products</button>
+        <div className="single-product-page">
+            {/* <button onClick={() => navigate(-1)} className="btn">Back to products</button> */}
             {productInfo ? (
-
-            <div>
-                <img src={productInfo.image} alt={productInfo.title} />
-                <div>
+                
+            <div className="product-details">
+                <div className="product-details-image">
+                    <img src={productInfo.image} alt={productInfo.title} className="product-img"/>
+                </div>
+                <div className="product-description">
                     <h4>{productInfo.title}</h4>
                     <p>Rate: {productInfo.rating.rate}</p>
                     <p>$ {productInfo.price}</p>
                     <h5>{productInfo.category}</h5>
                     <p>{productInfo.description}</p>
+                    <div>
+                        <span onClick={handleDecrement}>-</span>
+                        <span>{amount}</span>
+                        <span onClick={handleIncrement}>+</span>
+                    </div>
+                    <button onClick={() => handleClick(productInfo)} className="btn">Add to cart</button>
                 </div>
             </div>) : null}
-            <div>
-                <span onClick={() => toggleAmount(productInfo.id ,"dec")}>-</span>
-                <span>0</span>
-                <span onClick={() => toggleAmount(productInfo.id ,"inc")}>+</span>
-            </div>
-            <button onClick={() => handleClick(productInfo)}>Add to cart</button>
-        </>
+        </div>
     )
 }
 

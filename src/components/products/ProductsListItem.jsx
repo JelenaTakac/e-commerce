@@ -2,12 +2,12 @@ import { Link } from "react-router-dom";
 
 const ProductsListItem = ({product}) => {
   return (
-    <Link to={`/products/${product.id}`}>
+    <Link to={`/products/${product.id}`} style={{textDecoration: "none", color: "#5b6774"}}>
         <div className="product">
             <img src={product.image} alt={product.title} className="product-image"/>
             <h4>{product.title}</h4>
             <h4>{product.category}</h4>
-            <h4>{product.price}</h4>
+            <h4>${product.price}</h4>
         </div>
     </Link>
   )

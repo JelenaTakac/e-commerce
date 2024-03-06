@@ -1,13 +1,27 @@
 .footer {
-  background-color: purple;
+  /* background-color: #b0c4de; */
+  background-color: #5b6774;
   color: white;
-  /* position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
-  right: 0; */
+  right: 0;
+  width: 100%;
+  padding: 15px 0;
+}
+
+.footer-items {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 10px;
 }
 
 .footer-item {
   text-decoration: none;
   color: white;
+}
+
+.footer-item:hover {
+  color: #b0c4de;
 }

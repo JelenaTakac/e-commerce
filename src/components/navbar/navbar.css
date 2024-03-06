@@ -1,23 +1,39 @@
 .navbar {
-  background-color: blue;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  height: 70px;
+  background-color: #b0c4de;
+}
+
+.navbar-items {
+  display: flex;
+  height: 100%;
 }
 
 .navbar-item {
-  text-decoration: none;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 30px;
   color: white;
+  text-decoration: none;
 }
 
 .navbar-item.active {
-  background-color: red;
+  background-color: #5b6774;
 }
 
 .navbar-logo,
 .cart-icon {
-  width: 2vw;
-  height: 50px;
+  height: 100%;
   cursor: pointer;
-  padding: 5px;
+}
+
+.navbar-logo {
+  width: 3vw;
+}
+
+.cart-icon {
+  width: 2vw;
 }

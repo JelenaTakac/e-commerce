@@ -31,8 +31,20 @@ const Products = () => {
     }, []);
     
     return (
-        <div>
-            <h1>Products:</h1>
+        <div className="products-page">
+            <h1>Filter by:</h1>
+            <label>Filter by category:</label>
+            <select>
+                <option value="electronics">Electronics</option>
+                <option value="jewelery">Jewelery</option>
+                <option value="men's clothing">Men's clothing</option>
+                <option value="women's clothing">Women's clothing</option>
+            </select>
+            <label>Sort products by price:</label>
+            <select>
+                <option value="ascending">Ascending</option>
+                <option value="descending">Descending</option>
+            </select>
             {loading ? <Loading /> : error ? <Error error={error}/> : <ProductsList products={products}/>}
         </div>
     )

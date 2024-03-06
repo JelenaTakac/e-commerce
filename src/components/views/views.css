@@ -1,3 +1,105 @@
-.shopCart-home {
-  width: 50vw;
+.home-page {
+  display: flex;
+  align-items: center;
+  gap: 5vw;
+  max-width: 1200px;
+  margin: 50px auto;
+}
+
+.title {
+  color: #5b6774;
+}
+
+.title-stress {
+  color: #b0c4de;
+  background-color: #5b6774;
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+
+.home-introduction {
+  text-align: left;
+  width: 50%;
+}
+
+.home-container-image {
+  width: 50%;
+}
+
+.home-image {
+  width: 100%;
+}
+
+.btn {
+  text-transform: uppercase;
+  padding: 12px 20px;
+  background-color: #b0c4de;
+  border: 0;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #5b6774;
+}
+
+.home-introduction-btn {
+  margin-top: 20px;
+}
+
+/* .home-feature {
+} */
+
+.about-page {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 50px;
+}
+
+.about-section {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.about-title {
+  margin-bottom: 20px;
+}
+
+.products-page {
+  margin: 5vh 0 20vh;
+}
+
+.cart-page {
+  max-width: 1200px;
+  margin: 50px auto;
+}
+
+.single-product-page {
+  max-width: 1200px;
+  margin: 50px auto;
+}
+
+/* Ovaj dio treba prebaciti u zasebnu komponentu */
+
+.product-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 4px 4px 4px 8px #d3d3d3;
+  margin-top: 30px;
+}
+
+.product-details-image {
+  width: 50%;
+}
+.product-img {
+  width: 80%;
+}
+
+.product-description {
+  text-align: left;
+  width: 50%;
 }
