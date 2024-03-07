@@ -1,4 +1,4 @@
-import { ADD_TO_CART } from "../utils/actionTypes";
+import { ADD_TO_CART, CLEAR_CART, REMOVE_ITEM } from "../utils/actionTypes";
 
 // const initialCartState = {
 //   cartItems: [],
@@ -32,6 +32,26 @@ export const cartReducer = (state, action) => {
           cartTotal: state.cartTotal + price * amount,
         };
       }
+
+    case CLEAR_CART:
+      return {
+        cartItems: [],
+        numItemsInCart: 0,
+        cartTotal: 0,
+      };
+
+    case REMOVE_ITEM:
+      const { productID, productAmount, productPrice } = action.payload;
+      const currentCart = state.cartItems.filter(
+        (item) => item.id !== productID
+      );
+
+      return {
+        ...state,
+        cartItems: currentCart,
+        numItemsInCart: state.numItemsInCart - productAmount,
+        cartTotal: state.cartTotal - productPrice * productAmount,
+      };
 
     default:
       return state;

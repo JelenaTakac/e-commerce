@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import {
   Home,
   Cart,
@@ -23,17 +23,22 @@ function App() {
         <CartContextProvider>
           <ProductContextProvider>
             <Navbar />
-            <Routes>
-              <Route path="/cart" element={<Cart />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/products" element={<Products />} />
-              <Route path="/products/:productId" element={<SingleProduct />} />
-              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-              <Route path="/terms-of-service" element={<TermsOfService />} />
-              <Route path="/contact-us" element={<ContactUs />} />
-              <Route path="/" element={<Home />} />
-              <Route path="*" element={<PageNotFound />} />
-            </Routes>
+            <main className="main">
+              <Routes>
+                <Route path="/cart" element={<Cart />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/products" element={<Products />} />
+                <Route
+                  path="/products/:productId"
+                  element={<SingleProduct />}
+                />
+                <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                <Route path="/terms-of-service" element={<TermsOfService />} />
+                <Route path="/contact-us" element={<ContactUs />} />
+                <Route path="/" element={<Home />} />
+                <Route path="*" element={<PageNotFound />} />
+              </Routes>
+            </main>
             <Footer />
           </ProductContextProvider>
         </CartContextProvider>

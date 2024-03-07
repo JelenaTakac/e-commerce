@@ -1,13 +1,8 @@
 .footer {
-  /* background-color: #b0c4de; */
   background-color: #5b6774;
   color: white;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
   padding: 15px 0;
+  text-align: center;
 }
 
 .footer-items {

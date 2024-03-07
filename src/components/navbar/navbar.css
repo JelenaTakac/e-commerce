@@ -1,27 +1,35 @@
+/* Mobile first */
+
+.navigation {
+  background-color: #b0c4de;
+}
+.navbar-items-desktop {
+  display: none;
+}
+
 .navbar {
   display: flex;
-  justify-content: space-around;
   align-items: center;
-  height: 70px;
-  background-color: #b0c4de;
+  justify-content: space-between;
+  height: 60px;
+  /* background-color: #b0c4de; */
+  padding: 0 20px;
 }
 
 .navbar-items {
-  display: flex;
-  height: 100%;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  background-color: #b0c4de;
 }
 
 .navbar-item {
-  display: flex;
-  align-items: center;
-  height: 100%;
-  padding: 0 30px;
+  display: block;
+  padding: 5px 20px;
+
   color: white;
   text-decoration: none;
-}
-
-.navbar-item.active {
-  background-color: #5b6774;
 }
 
 .navbar-logo,
@@ -31,9 +39,101 @@
 }
 
 .navbar-logo {
-  width: 3vw;
+  width: 2.5rem;
 }
 
+.cart-humburger-container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.cart-container {
+  position: relative;
+  padding: 0 20px;
+}
+
+.cart-container span {
+  position: absolute;
+  top: -12px;
+  left: 8px;
+  background-color: #ffa500;
+  padding: 0px 6px;
+  border-radius: 50%;
+}
 .cart-icon {
-  width: 2vw;
+  width: 1.5rem;
+}
+
+.hamburger-button {
+  font-size: 1.2rem;
+}
+
+.navbar-item.active {
+  background-color: #5b6774;
+}
+
+/* Tablet */
+
+/* Desktop */
+
+@media only screen and (min-width: 1024px) {
+  .navbar {
+    height: 70px;
+    padding: 0;
+  }
+
+  .navbar-items-desktop {
+    position: static;
+    display: flex;
+    height: 100%;
+  }
+
+  .navbar-item {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 35px;
+    color: white;
+    text-decoration: none;
+  }
+
+  .navbar-item.active {
+    background-color: #5b6774;
+  }
+
+  .cart-container {
+    position: relative;
+    height: 100%;
+  }
+
+  .cart-container span {
+    position: absolute;
+    top: 6px;
+    left: 20px;
+    background-color: #ffa500;
+    padding: 2px 8px;
+    border-radius: 50%;
+  }
+
+  .navbar-logo,
+  .cart-icon {
+    height: 100%;
+    cursor: pointer;
+  }
+
+  .navbar-logo {
+    width: 3vw;
+  }
+
+  .cart-icon {
+    width: 2rem;
+  }
+
+  .cart-humburger-container {
+    display: block;
+    height: 100%;
+  }
+  .hamburger-button {
+    display: none;
+  }
 }

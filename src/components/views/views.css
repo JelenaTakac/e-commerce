@@ -1,11 +1,6 @@
 .home-page {
-  display: flex;
-  align-items: center;
-  gap: 5vw;
-  max-width: 1200px;
-  margin: 50px auto;
+  margin: 50px 20px;
 }
-
 .title {
   color: #5b6774;
 }
@@ -16,18 +11,33 @@
   padding: 5px 15px;
   border-radius: 5px;
 }
-
-.home-introduction {
-  text-align: left;
-  width: 50%;
-}
-
 .home-container-image {
-  width: 50%;
+  width: 80%;
+  margin: 20px auto;
 }
 
 .home-image {
   width: 100%;
+}
+@media only screen and (min-width: 1024px) {
+  .home-page {
+    display: flex;
+    align-items: center;
+    gap: 5vw;
+    max-width: 1200px;
+    margin: 50px auto;
+  }
+  .home-introduction {
+    text-align: left;
+    width: 50%;
+  }
+  .home-container-image {
+    width: 50%;
+  }
+
+  .home-image {
+    width: 100%;
+  }
 }
 
 .btn {
@@ -75,6 +85,7 @@
 .cart-page {
   max-width: 1200px;
   margin: 50px auto;
+  margin-bottom: 200px;
 }
 
 .single-product-page {
