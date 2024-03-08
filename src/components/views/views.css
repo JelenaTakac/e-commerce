@@ -24,8 +24,7 @@
     display: flex;
     align-items: center;
     gap: 5vw;
-    max-width: 1200px;
-    margin: 50px auto;
+    margin: 0;
   }
   .home-introduction {
     text-align: left;
@@ -58,59 +57,239 @@
   margin-top: 20px;
 }
 
-/* .home-feature {
-} */
-
-.about-page {
-  max-width: 1200px;
-  margin: 50px auto;
-  padding: 50px;
+.home-feature {
+  margin: 30px;
 }
 
-.about-section {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.home-product-container {
+  display: grid;
+  gap: 20px;
+  margin: 25px 0;
+}
+
+@media only screen and (min-width: 1024px) {
+  .home-feature {
+    margin-top: 30px;
+  }
+  .home-product-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 50px;
+    margin: 25px 0;
+  }
+}
+
+.product-container {
+  box-shadow: 4px 4px 4px 8px #d3d3d3;
+  border-radius: 10px;
+  text-align: center;
+  height: 100%;
+}
+
+.home-product {
+  width: 100px;
+  height: 150px;
+  object-fit: contain;
+}
+
+.home-feature-btn {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+/* about */
+
+.about-page {
+  padding: 80px 50px;
 }
 
 .about-title {
   margin-bottom: 20px;
 }
 
+/* Privacy police */
+
+.privacy-policy-page {
+  padding: 80px 50px;
+}
+
+/* Terms page */
+
+.terms-page {
+  padding: 80px 50px;
+}
+
+/* Contact us page */
+
+.contact-page {
+  text-align: center;
+}
+
+.contact-title {
+  margin-top: 30px;
+}
+
+.contact-form {
+  width: 75%;
+  margin: 30px auto;
+}
+@media only screen and (min-width: 1024px) {
+  .contact-form {
+    width: 50%;
+    margin: 30px auto;
+  }
+}
+
+.contact-form div {
+  display: flex;
+  padding: 5px 0;
+}
+
+.contact-form div label {
+  width: 30%;
+}
+
+.contact-form div input,
+.contact-form div textarea {
+  width: 70%;
+}
+
+/* Products page */
+
 .products-page {
-  margin: 5vh 0 20vh;
+  margin: 30px;
 }
 
-.cart-page {
-  max-width: 1200px;
-  margin: 50px auto;
-  margin-bottom: 200px;
+.filter {
+  margin-top: 5px;
 }
 
-.single-product-page {
-  max-width: 1200px;
-  margin: 50px auto;
+.filter label {
+  margin-right: 10px;
+}
+
+.filter select {
+  padding: 3px;
+  width: 35vw;
+}
+
+@media only screen and (min-width: 1024px) {
+  .products-page-title {
+    margin: 30px 0 20px;
+  }
+
+  .filter-products {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .filter label {
+    margin-right: 10px;
+  }
+
+  .filter select {
+    padding: 5px;
+    width: 15vw;
+  }
 }
 
 /* Ovaj dio treba prebaciti u zasebnu komponentu */
 
+/* single product page */
+
+.single-product-page {
+  margin: 30px;
+}
+
 .product-details {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   box-shadow: 4px 4px 4px 8px #d3d3d3;
-  margin-top: 30px;
+  margin: 30px auto;
+  padding: 10px;
+  text-align: center;
+  max-width: 350px;
 }
 
 .product-details-image {
-  width: 50%;
+  width: 60%;
+  padding: 20px;
 }
 .product-img {
   width: 80%;
 }
-
 .product-description {
-  text-align: left;
-  width: 50%;
+  text-align: center;
+  width: 90%;
+}
+
+.product-amount {
+  margin: 20px 0;
+}
+
+.btn-count {
+  padding: 5px 10px;
+  font-size: 16px;
+}
+
+.count-amount {
+  padding: 5px;
+}
+@media only screen and (min-width: 1024px) {
+  .product-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 4px 4px 4px 8px #d3d3d3;
+    margin: 30px auto;
+    width: 60%;
+    padding: 30px 10px;
+    max-width: 700px;
+  }
+
+  .product-details-image {
+    width: 40%;
+    padding: 20px;
+  }
+  .product-img {
+    width: 80%;
+  }
+
+  .product-description {
+    text-align: left;
+    width: 50%;
+  }
+
+  .product-amount {
+    margin: 20px 0;
+  }
+
+  .btn-count {
+    padding: 5px 10px;
+    font-size: 16px;
+  }
+
+  .count-amount {
+    padding: 5px;
+  }
+}
+
+/* Cart page */
+
+.cart-page {
+  margin: 20px;
+}
+
+.cart-title {
+  margin-top: 30px;
+}
+
+.cart-products {
+  margin-top: 20px;
 }

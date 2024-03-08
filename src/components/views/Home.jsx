@@ -19,7 +19,7 @@ const Home = () => {
 
     return (
         <>
-        <div className="home-page">
+        <div className="home-page wrapper">
             <div className="home-introduction">
                 <h1 className="title">Welcome to our store!</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, omnis explicabo sit amet consectetur!</p>
@@ -30,19 +30,20 @@ const Home = () => {
                 <img src={shopCart} alt="Shop cart" className="home-image"/>
             </div>
         </div>
-        {/* {featuredProducts ? (
-            <div className="home-feature">
-            <h2 className="title">Featured Products</h2>
-            <div>
-                {featuredProducts.slice(0, 3).map(product => (
-                    <div key={product.id}>
-                        <img src={product.image} alt={product.title} />
-                    </div>
-                ))}
-            </div>
-            <button onClick={() => navigate("/products")} className="btn">Our products</button>
+        {featuredProducts ? (
+        <div className="home-feature wrapper">
+                <h2 className="title">Featured Products</h2>
+                <div className="home-product-container">
+                    {featuredProducts.slice(0, 3).map(product => (
+                        <div key={product.id} className="product-container">
+                            <img className="home-product" src={product.image} alt={product.title} />
+                            <h4>{product.title}</h4>
+                        </div>
+                    ))}
+                </div>
+                <button onClick={() => navigate("/products")} className="btn home-feature-btn">Our products</button>
         </div>
-        ) : null} */}
+        ) : null}
         </>
     )
 }

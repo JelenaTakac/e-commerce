@@ -66,19 +66,25 @@ const Products = () => {
     }, [categoryValue, priceFlow]);
     
     return (
-        <div className="products-page">
-            <h1>Filter by:</h1>
-            <label>Filter by category:</label>
-            <select value={categoryValue} onChange={handleChangeCategory}>
-                {categories.map((category, index) => (
-                    <option key={index} value={category}>{category}</option>
-                ))}
-            </select>
-            <label>Sort products by price:</label>
-            <select value={priceFlow} onChange={handleChangePriceFlow}>
-                <option value="ascending">Ascending</option>
-                <option value="descending">Descending</option>
-            </select>
+        <div className="products-page wrapper">
+            <h1 className="title products-page-title">Filter by:</h1>
+            <div className="filter-products">
+                <div className="filter">
+                    <label>Filter by category:</label>
+                    <select value={categoryValue} onChange={handleChangeCategory}>
+                        {categories.map((category, index) => (
+                            <option key={index} value={category}>{category}</option>
+                            ))}
+                    </select>
+                </div>
+                <div className="filter">
+                    <label>Sort products by price:</label>
+                    <select value={priceFlow} onChange={handleChangePriceFlow}>
+                        <option value="ascending">Ascending</option>
+                        <option value="descending">Descending</option>
+                    </select>
+                </div>
+            </div>
             {loading ? <Loading /> : error ? <Error error={error}/> : <ProductsList products={products}/>}
         </div>
     )

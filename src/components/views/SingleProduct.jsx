@@ -46,7 +46,7 @@ const SingleProduct = () => {
 
 
     return (
-        <div className="single-product-page">
+        <div className="single-product-page wrapper">
             {/* <button onClick={() => navigate(-1)} className="btn">Back to products</button> */}
             {productInfo ? (
                 
@@ -60,10 +60,10 @@ const SingleProduct = () => {
                     <p>$ {productInfo.price}</p>
                     <h5>{productInfo.category}</h5>
                     <p>{productInfo.description}</p>
-                    <div>
-                        <span onClick={handleDecrement}>-</span>
-                        <span>{amount}</span>
-                        <span onClick={handleIncrement}>+</span>
+                    <div className="product-amount">
+                        <span className="btn btn-count" onClick={handleDecrement}>-</span>
+                        <span className="count-amount">{amount}</span>
+                        <span className="btn btn-count" onClick={handleIncrement}>+</span>
                     </div>
                     <button onClick={() => handleClick(productInfo)} className="btn">Add to cart</button>
                 </div>

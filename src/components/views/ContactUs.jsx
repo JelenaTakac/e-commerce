@@ -2,9 +2,9 @@ import React from 'react'
 
 const ContactUs = () => {
   return (
-    <div>
-        <h1>Contact Us:</h1>
-        <form>
+    <div className="contact-page wrapper">
+        <h1 className="title contact-title">Contact Us:</h1>
+        <form className="contact-form">
             <div>
                 <label>First Name: </label>
                 <input type="text" />
@@ -29,7 +29,7 @@ const ContactUs = () => {
                 <label>Message: </label>
                 <textarea></textarea>
             </div>
-            <input type="submit" value="Send" />
+            <input type="submit" value="Send" className='btn'/>
         </form>
     </div>
   )

@@ -1,0 +1,21 @@
+.cart-product {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.cart-product img {
+  width: 80px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .cart-product {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .cart-product img {
+    width: 100px;
+  }
+}
