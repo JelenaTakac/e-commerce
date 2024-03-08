@@ -1,7 +1,5 @@
 .cart-product {
-  display: flex;
-  align-items: center;
-  gap: 50px;
+  display: block;
 }
 
 .cart-product img {
@@ -17,5 +15,13 @@
 
   .cart-product img {
     width: 100px;
+  }
+
+  .cart-product-title {
+    width: 500px;
+  }
+  .order-btn,
+  .clear-btn {
+    margin-top: 20px;
   }
 }

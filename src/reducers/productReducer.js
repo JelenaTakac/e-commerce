@@ -4,12 +4,6 @@ import {
   FETCH_PRODUCTS_FAILURE,
 } from "../utils/actionTypes";
 
-// const initialProductState = {
-//   products: [],
-//   loading: false,
-//   error: null,
-// };
-
 export const productReducer = (state, action) => {
   console.log(action);
   switch (action.type) {

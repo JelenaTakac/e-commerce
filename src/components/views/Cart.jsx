@@ -35,14 +35,13 @@ const Cart = () => {
         setPurchaseModal(false);
     }
 
-
     return (
         <div className="cart-page wrapper">
             {numItemsInCart === 0 
             ?
-            <div>
-                <h1>"Your cart is empty"</h1>
-                <button onClick={() => navigate("/products")} className="btn">Shop now</button>
+            <div className="cart-info">
+                <h1 className="title">"Your cart is empty"</h1>
+                <button onClick={() => navigate("/products")} className="btn btn-shop">Shop now</button>
             </div>
             : 
             <div>
@@ -50,14 +49,15 @@ const Cart = () => {
            { cartItems.map(product => (
             <div key={product.id} className="cart-products">
                <CartItem  product={product}/>
-                <button onClick={() => handleRemoveItemFromCart(product)}>Remove</button>
+                <button onClick={() => handleRemoveItemFromCart(product)} className="btn remove-btn">Remove</button>
             </div>
            ))}
-           
             <hr />
-            <h4>TOTAL: ${cartTotal}</h4>
-            <button className="btn" onClick={handleOrderNowClick}>Order now</button>
-            <button onClick={handleClearCart} className="btn">Clear All</button>
+            <h2 className="cart-total">TOTAL: {cartTotal}$</h2>
+            <div className="btn-container">
+                <button onClick={handleClearCart} className="btn clear-btn">Clear All</button>
+                <button className="btn order-btn" onClick={handleOrderNowClick}>Order now</button>
+            </div>
 
             {purchaseModal &&  <Purchase cartTotal={cartTotal} onClose={handleClosePurchase} onClearCart={handleClearCart}/>}
             </div>

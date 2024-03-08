@@ -1,0 +1,26 @@
+.purchase {
+  display: flex;
+  justify-content: center;
+}
+
+.form-purchase {
+  width: 50%;
+}
+
+.form-purchase div {
+  display: flex;
+  padding: 5px 0;
+}
+
+.form-purchase div label {
+  width: 30%;
+}
+
+.form-purchase div input {
+  width: 70%;
+}
+
+.buy-btn {
+  display: block;
+  margin: 20px auto;
+}

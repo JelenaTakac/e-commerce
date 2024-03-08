@@ -12,12 +12,12 @@ const CartItem = ({product}) => {
             <div>
                 <img src={image} alt={title} />
             </div>
-            <div>
+            <div className="cart-product-title">
                 <h4>{title}</h4>
                 <h4>{category}</h4>
-                <h4>{amount}</h4>
-                <h4>${price}</h4>
             </div>
+            <h4>{amount}</h4>
+            <h4>{price}$</h4>
         </div>
     )
 }

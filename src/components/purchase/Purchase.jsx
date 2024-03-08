@@ -1,13 +1,10 @@
-import { useState } from "react";
 import Swal from "sweetalert2";
+import "./purchase.css"
 
-
-const Purchase = ({cartTotal, onClearCart}) => {
-    const [purchaseSuccess, setPurchaseSuccess] = useState(false);
+const Purchase = ({onClearCart}) => {
 
     const handleSubmitPurchase = (e) => {
         e.preventDefault();
-        setPurchaseSuccess(true);
         onClearCart();
         Swal.fire({
             icon: "success",
@@ -18,8 +15,8 @@ const Purchase = ({cartTotal, onClearCart}) => {
     }
     
   return (
-    <div>
-        <form onSubmit={handleSubmitPurchase}> 
+    <div className="wrapper purchase">
+        <form onSubmit={handleSubmitPurchase} className="form-purchase"> 
             <div>
                 <label>First Name: </label>
                 <input type="text" />
@@ -40,8 +37,7 @@ const Purchase = ({cartTotal, onClearCart}) => {
                 <label>Postal Code: </label>
                 <input type="text" />
             </div>
-            <h4>TOTAL: ${cartTotal}</h4>
-            <input type="submit" value="Send"/>
+            <input type="submit" value="Buy" className="btn buy-btn"/>
         </form>
     </div>
   )
