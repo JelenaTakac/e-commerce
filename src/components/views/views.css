@@ -66,6 +66,7 @@
 
 .home-product-container {
   display: grid;
+  justify-content: center;
   gap: 20px;
   margin: 25px 0;
 }

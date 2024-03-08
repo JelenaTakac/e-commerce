@@ -13,7 +13,6 @@ const Home = () => {
         instance.get("/products")
         .then(res => {
             setFeaturedProducts(res.data);
-            console.log(res.data);
         })
         .catch(error => console.error("Error occure", error))
     }, []);
@@ -36,7 +35,7 @@ const Home = () => {
                 <h2 className="title">Featured Products</h2>
                 <div className="home-product-container">
                     {featuredProducts.slice(0, 4).map(product => (
-                        <ProductsListItem product={product} />
+                        <ProductsListItem key={product.id} product={product} />
                     ))}
                 </div>
             </div>
