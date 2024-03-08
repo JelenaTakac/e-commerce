@@ -53,7 +53,7 @@ const Cart = () => {
             </div>
            ))}
             <hr />
-            <h2 className="cart-total">TOTAL: {cartTotal}$</h2>
+            <h2 className="cart-total">TOTAL: {cartTotal.toFixed(2)}$</h2>
             <div className="btn-container">
                 <button onClick={handleClearCart} className="btn clear-btn">Clear All</button>
                 <button className="btn order-btn" onClick={handleOrderNowClick}>Order now</button>
