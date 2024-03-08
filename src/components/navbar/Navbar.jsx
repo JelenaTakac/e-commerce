@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext } from "react";
+import { useState, useContext } from "react";
 import { CartContext } from "../../contexts/CartContext";
 import { NavLink, useNavigate } from "react-router-dom";
 import { ReactComponent as Logo } from "../../assets/logo.svg";
@@ -22,13 +22,12 @@ const Navbar = () => {
             <div className="navbar wrapper">
                 <Logo fill="#5b6774" className="navbar-logo" onClick={() => navigate("/")}/>
                 {isOpen && (
-                    <div className="navbar-items">
-                        <NavLink to={"/"} className="navbar-item" end>Home</NavLink>
-                        <NavLink to={"/about"} className="navbar-item" end>About</NavLink>
-                        <NavLink to={"/products"} className="navbar-item" end>Products</NavLink>
-                        <NavLink to={"/contact-us"} className="navbar-item" end>Contact Us</NavLink>
-                    </div>
-                )}
+                <div className="navbar-items">
+                    <NavLink to={"/"} className="navbar-item" end>Home</NavLink>
+                    <NavLink to={"/about"} className="navbar-item" end>About</NavLink>
+                    <NavLink to={"/products"} className="navbar-item" end>Products</NavLink>
+                    <NavLink to={"/contact-us"} className="navbar-item" end>Contact Us</NavLink>
+                </div>)}
                 <div className="navbar-items-desktop">
                     <NavLink to={"/"} className="navbar-item" end>Home</NavLink>
                     <NavLink to={"/about"} className="navbar-item" end>About</NavLink>

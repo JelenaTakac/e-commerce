@@ -47,18 +47,16 @@ const SingleProduct = () => {
 
     return (
         <div className="single-product-page wrapper">
-            {/* <button onClick={() => navigate(-1)} className="btn">Back to products</button> */}
             {productInfo ? (
-                
             <div className="product-details">
                 <div className="product-details-image">
                     <img src={productInfo.image} alt={productInfo.title} className="product-img"/>
                 </div>
                 <div className="product-description">
                     <h4>{productInfo.title}</h4>
-                    <p>Rate: {productInfo.rating.rate}</p>
-                    <p>$ {productInfo.price}</p>
                     <h5>{productInfo.category}</h5>
+                    <p>Rate: {productInfo.rating.rate}</p>
+                    <p>Price: {productInfo.price}$</p>
                     <p>{productInfo.description}</p>
                     <div className="product-amount">
                         <span className="btn btn-count" onClick={handleDecrement}>-</span>

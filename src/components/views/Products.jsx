@@ -1,19 +1,10 @@
-import { useEffect, useContext, useState } from "react";
+import { useState, useEffect, useContext  } from "react";
 import { ProductContext } from "../../contexts/ProductContext";
 import { FETCH_PRODUCTS_REQUEST, FETCH_PRODUCTS_SUCCESS, FETCH_PRODUCTS_FAILURE } from "../../utils/actionTypes";
 import instance from "../../utils/api";
 import Loading from "../loading/Loading";
 import Error from "../error/Error";
 import { ProductsList } from "../products";
-
-/*
-action= {
-    type: 'string',
-    payload: {}
-}
-*/
-
-// sortiranje po ceni rastuce (asce) ili opadajuce (desc) products.sort(...)
 
 const Products = () => {
     const {productState, productDispatch} = useContext(ProductContext);
@@ -30,7 +21,6 @@ const Products = () => {
         setPriceFlow(e.target.value);
     }
 
-    // filter by category - ovdje samo dolazim do categorija
     useEffect(() => {
         productDispatch({type: FETCH_PRODUCTS_REQUEST});
         instance.get("/products/categories")

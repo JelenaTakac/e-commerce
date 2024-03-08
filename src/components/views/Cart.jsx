@@ -1,12 +1,14 @@
-import { useContext } from "react"
+import { useState, useContext } from "react"
 import { CartContext } from "../../contexts/CartContext"
 import CartItem from "../cart/CartItem";
 import { useNavigate } from "react-router-dom";
 import { CLEAR_CART, REMOVE_ITEM } from "../../utils/actionTypes";
+import Purchase from "../purchase/Purchase";
 
 const Cart = () => {
     const {cartState, cartDispatch} =  useContext(CartContext);
     const {cartItems, numItemsInCart, cartTotal} = cartState;
+    const [purchaseModal, setPurchaseModal] = useState(false);
     const navigate = useNavigate();
 
     const handleClearCart = () => {
@@ -23,6 +25,14 @@ const Cart = () => {
                 productPrice
             },
         })
+    }
+
+    const handleOrderNowClick = () => {
+        setPurchaseModal(true);
+    }
+
+    const handleClosePurchase = () => {
+        setPurchaseModal(false);
     }
 
 
@@ -46,11 +56,10 @@ const Cart = () => {
            
             <hr />
             <h4>TOTAL: ${cartTotal}</h4>
-            <button className="btn">Order now</button>
-            {/* redirect za stranicu za placanje - preko private rute 
-            mozda jos da dodam login 
-            */}
+            <button className="btn" onClick={handleOrderNowClick}>Order now</button>
             <button onClick={handleClearCart} className="btn">Clear All</button>
+
+            {purchaseModal &&  <Purchase cartTotal={cartTotal} onClose={handleClosePurchase} onClearCart={handleClearCart}/>}
             </div>
             }
         </div>

@@ -1,5 +1,8 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import CartContextProvider from "./contexts/CartContext";
+import ProductContextProvider from "./contexts/ProductContext";
+import Navbar from "./components/navbar/Navbar";
 import {
   Home,
   Cart,
@@ -11,10 +14,7 @@ import {
   TermsOfService,
   ContactUs,
 } from "./components/views";
-import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
-import ProductContextProvider from "./contexts/ProductContext";
-import CartContextProvider from "./contexts/CartContext";
 
 function App() {
   return (
