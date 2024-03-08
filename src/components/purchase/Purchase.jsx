@@ -1,31 +1,25 @@
 import { useState } from "react";
+import Swal from "sweetalert2";
 
 
-const Purchase = ({cartTotal, onClose, onClearCart}) => {
+const Purchase = ({cartTotal, onClearCart}) => {
     const [purchaseSuccess, setPurchaseSuccess] = useState(false);
 
     const handleSubmitPurchase = (e) => {
         e.preventDefault();
         setPurchaseSuccess(true);
+        onClearCart();
+        Swal.fire({
+            icon: "success",
+            title: "You have successfully purchased the products. Coming soon be delivered to your address.",
+            showConfirmButton: false,
+            timer: 3000, 
+        });
     }
     
-    const handleResetForm = () => {
-        setPurchaseSuccess(false);
-        onClearCart();
-        onClose();
-    }
-
-
   return (
     <div>
-        {purchaseSuccess ? (
-            <div>
-                <p>Uspesno ste kupili proizvode.</p>
-                <button onClick={handleResetForm}>Close</button>
-            </div>
-        ) : (
-
-            <form onSubmit={handleSubmitPurchase}> 
+        <form onSubmit={handleSubmitPurchase}> 
             <div>
                 <label>First Name: </label>
                 <input type="text" />
@@ -49,7 +43,6 @@ const Purchase = ({cartTotal, onClose, onClearCart}) => {
             <h4>TOTAL: ${cartTotal}</h4>
             <input type="submit" value="Send"/>
         </form>
-        )}
     </div>
   )
 }

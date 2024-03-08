@@ -1,22 +1,13 @@
 import { createContext, useReducer } from "react";
-import { cartReducer } from "../reducers/cartReducer";
+import { cartReducer, loadCartFromLocalStorage } from "../reducers/cartReducer";
 
 export const CartContext = createContext();
 
-// const initialCartState = {
-//   cart: [],
-//   total: 0,
-//   amount: 0,
-// };
-
-const initialCartState = {
-  cartItems: [],
-  numItemsInCart: 0,
-  cartTotal: 0,
-};
-
 const CartContextProvider = ({ children }) => {
-  const [cartState, cartDispatch] = useReducer(cartReducer, initialCartState);
+  const [cartState, cartDispatch] = useReducer(
+    cartReducer,
+    loadCartFromLocalStorage()
+  );
 
   return (
     <CartContext.Provider value={{ cartState, cartDispatch }}>
