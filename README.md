@@ -1,7 +1,5 @@
 # eCommerce Shop App
 
-# My eCommerce React App
-
 Welcome to my eCommerce React app, a project that brings a seamless shopping experience to users. This application utilizes React, Axios for data fetching from an external API, useContext and useReducer for state management, React Router for navigation, FontAwesome icons for enhanced visuals, and localStorage for persistent cart data.
 
 ## Features
