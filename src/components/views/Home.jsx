@@ -21,7 +21,7 @@ const Home = () => {
         <>
             <div className="home-page wrapper">
                 <div className="home-introduction">
-                    <h1 className="title">Welcome to our store!</h1>
+                    <h1 className="title text-4xl">Welcome to our store!</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, omnis explicabo sit amet consectetur!</p>
                     <p>Facere quidem soluta ullam unde omnis laboriosam dolorum dicta totam quasi eaque perspiciatis explicabo vel quos repellendus, commodi, quaerat illo architecto non, corrupti consectetur! Earum quam, eum ullam sapiente asperiores at nisi voluptatum enim assumenda vitae molestias.</p>
                     <button onClick={() => navigate("/products")} className="btn home-introduction-btn">Shop now</button>
