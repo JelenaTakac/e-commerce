@@ -61,7 +61,7 @@ const Products = () => {
             <div className="filter-products">
                 <div className="filter">
                     <label>Filter by category:</label>
-                    <select value={categoryValue} onChange={handleChangeCategory}>
+                    <select value={categoryValue} onChange={handleChangeCategory} className="select select-bordered w-full max-w-xs">
                         {categories.map((category, index) => (
                             <option key={index} value={category}>{category}</option>
                             ))}
@@ -69,7 +69,7 @@ const Products = () => {
                 </div>
                 <div className="filter">
                     <label>Sort products by price:</label>
-                    <select value={priceFlow} onChange={handleChangePriceFlow}>
+                    <select value={priceFlow} onChange={handleChangePriceFlow} className="select select-bordered w-full max-w-xs">
                         <option value="ascending">Ascending</option>
                         <option value="descending">Descending</option>
                     </select>
