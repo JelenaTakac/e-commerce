@@ -4,28 +4,28 @@ const ContactUs = () => {
         <h1 className="title contact-title">Contact Us:</h1>
         <form className="contact-form">
             <div>
-                <label>First Name: </label>
-                <input type="text" />
+                <label className="form-control w-full max-w-xs">First Name: </label>
+                <input type="text" className="input input-bordered w-full max-w-xs"/>
             </div>
             <div>
-                <label>Last Name: </label>
-                <input type="text" />
+                <label className="form-control w-full max-w-xs">Last Name: </label>
+                <input type="text" className="input input-bordered w-full max-w-xs"/>
             </div>
             <div>
-                <label>Email: </label>
-                <input type="email" />
+                <label className="form-control w-full max-w-xs">Email: </label>
+                <input type="email" className="input input-bordered w-full max-w-xs"/>
             </div>
             <div>
-                <label>Phone: </label>
-                <input type="number" />
+                <label className="form-control w-full max-w-xs">Phone: </label>
+                <input type="number" className="input input-bordered w-full max-w-xs"/>
             </div>
             <div>
-                <label>Subject: </label>
-                <input type="text" />
+                <label className="form-control w-full max-w-xs">Subject: </label>
+                <input type="text" className="input input-bordered w-full max-w-xs"/>
             </div>
             <div>
-                <label>Message: </label>
-                <textarea></textarea>
+                <label className="form-control w-full max-w-xs">Message: </label>
+                <textarea className="textarea textarea-bordered h-24 w-full max-w-xs"></textarea>
             </div>
             <input type="submit" value="Send" className='btn'/>
         </form>
