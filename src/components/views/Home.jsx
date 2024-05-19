@@ -27,7 +27,7 @@ const Home = () => {
                     <button onClick={() => navigate("/products")} className="btn home-introduction-btn">Shop now</button>
                 </div>
                 <div className="home-container-image">
-                    <img src={shopCart} alt="Shop cart" className="home-image"/>
+                    <img src={shopCart} alt="Shop cart" className="home-image rounded-2xl"/>
                 </div>
             </div>
             {featuredProducts ? (
