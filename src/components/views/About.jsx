@@ -4,8 +4,15 @@ const About = () => {
   return (
     <div className="wrapper pt-16 mx-0">
         <h1 className="title about-title">We love <span className="title-stress">shopping</span></h1>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo quisquam culpa, labore totam recusandae aliquid! Libero animi adipisci est dicta rem nisi distinctio quia quod aperiam, sed, amet neque similique. Voluptates quasi repellat dolorem placeat eos culpa! Esse rerum exercitationem, obcaecati deserunt incidunt, repellat sint odit quisquam tenetur, blanditiis quidem commodi. Ratione animi soluta corporis deleniti corrupti ut voluptatum similique, nihil cumque, voluptates vitae nesciunt ex mollitia quis quod quasi assumenda provident sed ea.</p>
-        <p>Dolorum maiores magni incidunt explicabo sapiente quidem, doloremque assumenda, consequuntur quisquam ab facilis laudantium sed debitis corrupti perferendis laboriosam omnis, ea sunt fugit necessitatibus itaque qui. Ratione animi soluta corporis deleniti corrupti ut voluptatum similique, nihil cumque, voluptates vitae nesciunt ex mollitia quis quod quasi assumenda provident sed ea.</p>
+        <div>
+            Welcome to our store, your number one source for all things, fashion, electronics and  yewelery. We're dedicated to providing you the very best of electronics, with an emphasis on quality, customer service, and uniqueness.
+            <br />
+            Founded in 2023 by Jelena Andelic, our store has come a long way from its beginnings in  a small retail shop. When Jelena first started out, their passion for eco-friendly products, affordable fashion, cutting-edge technology drove them to start their own business.
+            <br />
+            We now serve customers all over  the world and are thrilled that we're able to turn our passion into our own website.
+            <br />
+            We hope you enjoy our products as much as we enjoy offering them to you. If you have any questions or comments, please don't hesitate to contact us.
+        </div>
     </div>
   )
 }
